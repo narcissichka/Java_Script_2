@@ -42,7 +42,6 @@ const app = new Vue({
             }
         },
         filterGoods() {
-            this.userSearch = document.querySelector('.search-field').value;
             const regExp = new RegExp(this.userSearch, 'i');
             const block = document.querySelectorAll('.product-item');
 
