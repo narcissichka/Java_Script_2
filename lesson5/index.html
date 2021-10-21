@@ -19,7 +19,7 @@
             <div class="logo">E-shop</div>
             <div class="cart">
                 <form @submit.prevent="filterGoods()" action="#" class="search-form">
-                    <input type="text" class="search-field" v-model="userSearch">
+                    <input type="text" class="search-field" v-model="userSearch" @input="filterGoods()">
                     <button class="btn-search" type="submit">
                         <i class="fas fa-search"></i>
                     </button>
@@ -62,18 +62,3 @@
 </body>
 
 </html>
-
-<!--<div class="cart-item" data-id="${this.id_product}">-->
-<!--<div class="product-bio">-->
-<!--<img src="${this.img}" alt="Some image">-->
-<!--<div class="product-desc">-->
-<!--<p class="product-title">${this.product_name}</p>-->
-<!--<p class="product-quantity">Quantity: ${this.quantity}</p>-->
-<!--<p class="product-single-price">$${this.price} each</p>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="right-block">-->
-<!--<p class="product-price">${this.quantity*this.price}</p>-->
-<!--<button class="del-btn" data-id="${this.id_product}">&times;</button>-->
-<!--</div>-->
-<!--</div>-->
