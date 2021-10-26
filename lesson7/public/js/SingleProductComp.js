@@ -8,7 +8,6 @@ Vue.component('single-product', {
         this.$parent.getJson(`/api/product`)
             .then(data => {
                 this.$data.product = data[0];
-                // this.$parent.$refs.products.data.products.push(data[0]);
             });
     },
     template: `<div class="product-information container">
