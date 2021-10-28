@@ -269,6 +269,17 @@ details summary::-webkit-details-marker {
 
 .header-content__right > a img {
   width: 2.197vw;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
+}
+
+.header-content__right > a img:hover {
+  -webkit-filter: brightness(0) saturate(100%);
+          filter: brightness(0) saturate(100%);
+  -webkit-filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
+          filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
 }
 
 .header-content__search {
@@ -289,8 +300,10 @@ details summary::-webkit-details-marker {
 }
 
 .header-content__search .search:hover {
-  -webkit-filter: brightness(200%);
-          filter: brightness(200%);
+  -webkit-filter: brightness(0) saturate(100%);
+          filter: brightness(0) saturate(100%);
+  -webkit-filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
+          filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
 }
 
 .header-content__search .search-form {
@@ -339,6 +352,17 @@ details summary::-webkit-details-marker {
 
 .header .carticon {
   width: 2.197vw;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
+}
+
+.header .carticon:hover {
+  -webkit-filter: brightness(0) saturate(100%);
+          filter: brightness(0) saturate(100%);
+  -webkit-filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
+          filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
 }
 
 .header .cart-amount {
@@ -489,6 +513,17 @@ details summary::-webkit-details-marker {
 .menu-navigation .menu {
   padding-top: 20%;
   width: 2.197vw;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
+}
+
+.menu-navigation .menu:hover {
+  -webkit-filter: brightness(0) saturate(100%);
+          filter: brightness(0) saturate(100%);
+  -webkit-filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
+          filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
 }
 
 .menu-navigation .nav {

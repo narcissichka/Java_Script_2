@@ -215,6 +215,11 @@ details summary::-webkit-details-marker {
             &>a {
                 & img {
                     width: 2.197vw;
+                    transition: filter 0.2s linear;
+                    &:hover{
+                        filter: brightness(0) saturate(100%);
+                        filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
+                    }
                 }
             }
         }
@@ -229,7 +234,8 @@ details summary::-webkit-details-marker {
                 cursor: pointer;
                 transition: filter 0.2s linear;
                 &:hover{
-                    filter: brightness(200%);
+                    filter: brightness(0) saturate(100%);
+                    filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
                 }
             }
 
@@ -238,9 +244,6 @@ details summary::-webkit-details-marker {
                 top: -1.45vw;
                 left: 0;
                 display: flex;
-                // visibility: hidden;
-                // opacity: 0;
-                // transition: visibility 0s, opacity 0.5s linear;
 
                 .search-input {
                     height: 2.67vw;
@@ -271,6 +274,11 @@ details summary::-webkit-details-marker {
         display: flex;
         &icon{
             width: 2.197vw;
+            transition: filter 0.2s linear;
+            &:hover{
+                filter: brightness(0) saturate(100%);
+                filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
+            }
         }
         &-amount {
             position: absolute;
@@ -372,6 +380,11 @@ details summary::-webkit-details-marker {
     .menu {
         padding-top: 20%;
         width: 2.197vw;
+        transition: filter 0.2s linear;
+        &:hover{
+            filter: brightness(0) saturate(100%);
+            filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
+        }
     }
 
     .nav {

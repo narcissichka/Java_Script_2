@@ -8,7 +8,12 @@ let change = (cart, req) => {
     return JSON.stringify(cart, null, 4);
 };
 let remove = (cart, req) => {
-    cart.contents.splice(cart.contents.indexOf(req.body), 1);
+    let find = cart.contents.find(el => el.id_product === +req.params.id);
+    if (find.quantity > 1) {
+        find.quantity -= 1;
+    } else {
+        cart.contents.splice(cart.contents.indexOf(find), 1);
+    }
     return JSON.stringify(cart, null, 4);
 };
 
