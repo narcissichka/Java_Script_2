@@ -1,0 +1,323 @@
+.background{
+    background-color: $secondary-grey__color;
+}
+
+.cart-page {
+    margin-block: 6.42vw 8.62vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .cart-content {
+        width: $cart-content__width;
+
+        &__item {
+            min-height: 4.21vw;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0.33vw 0.67vw 1.34vw $shadow-color;
+            transition: background-color 0.2s linear;
+
+            &:not(:last-of-type) {
+                margin-bottom: 2.67vw;
+            }
+            &-img {
+                width: 40.18%;
+                transition: filter 0.2s linear;
+            }
+
+            &-info {
+                margin-top: 1.47vw;
+                width: 40.18%;
+
+                &__header {
+                    margin-bottom: 2.81vw;
+                    text-transform: uppercase;
+                    @include font(normal, 1.6vw, 120.83%, normal);
+                    color: $dark-color;
+                }
+
+                &__details {
+                    text-transform: capitalize;
+                    @include font(normal, 1.47vw, 145.45%, normal);
+                    color: darken($secondary-grey__color, 9%);
+
+                    &-price {
+                        color: $highlight-pink__color;
+                        transition: color 0.2s linar;
+                    }
+
+                    &-item {
+                        color: $secondary-grey__color;
+                    }
+
+                    &>input {
+                        width: 18%;
+                        @include font(normal, 1.2vw, 122.22%, normal);
+                        text-align: center;
+                        padding-inline: 3.5%;
+                        color: $secondary-grey__color;
+                        border: 1px solid $catalog-page__and__checkbox-bd__color;
+                        transition: all 0.2s linear;
+                    }
+                }
+            }
+
+            &-close {
+                margin-top: 1.87vw;
+                margin-right: 3.37%;
+                width: 2.76%;
+                height: 2.76%;
+                border: none;
+                background-color: white;
+                cursor: pointer;
+                order:3;
+                transition: background-color 0.2s linear;
+
+                &:hover ~.cart-content__item-img {
+                    filter: brightness(50%);
+                }
+                &:hover ~.cart-content__item-info input,
+                &:hover{
+                    background-color: $secondary-grey__color;
+                }
+                &:hover ~.cart-content__item-info input{
+                    border:none;
+                }
+                &:hover ~.cart-content__item-info .cart-content__item-info__details-price{
+                    color: $dark-color;
+                }
+                &>img {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__buttons {
+            margin-top: 4.88vw;
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
+
+    .cart-info {
+        margin-top: 1.4vw;
+        width: 31.58%;
+
+        &__adress {
+            display: flex;
+            flex-direction: column;
+
+            &-header {
+                margin-bottom: 1.4vw;
+                text-transform: uppercase;
+                @include font(300, 1.07vw, 118.75%, normal);
+                color: $dark-color;
+            }
+
+            .cart-info__input {
+                margin-bottom: 1.4vw;
+                padding-inline: 1.14vw;
+            }
+        }
+
+        &__checkout {
+            margin-top: 3.88vw;
+            padding: 2.67vw;
+            width: 100%;
+            background-color: lighten($secondary-grey__color, 52%);
+            text-align: right;
+
+            &-sub {
+                text-transform: uppercase;
+                @include font(normal, 0.74vw, 118.18%, normal);
+                color: darken($secondary-grey__color, 14%);
+            }
+
+            &-header {
+                text-transform: uppercase;
+                @include font(300, 1.07vw, 118.75%, normal);
+                color: $dark-color;
+            }
+
+            &-grand {
+                font-weight: 700;
+                color: $highlight-pink__color;
+            }
+
+            &-hline {
+                margin-block: 5.83% 4.72%;
+                width: 100%;
+                height: 1px;
+                display: inline-block;
+                background-color: lighten($secondary-grey__color, 45.5%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .cart-page {
+        margin-block: 7.68vw 16.67vw;
+        flex-wrap: wrap;
+
+        .cart-content {
+            width: 100%;
+
+            &__item {
+                width: 100%;
+
+                &:first-of-type {
+                    margin-bottom: 5.21vw;
+                }
+
+                &-info {
+                    margin-top: 2.86vw;
+
+                    &__header {
+                        margin-bottom: 5.47vw;
+                        font-size: 3.13vw;
+                    }
+
+                    &__details {
+                        font-size: 2.86vw;
+
+                        &>input {
+                            font-size: 2.34vw;
+                            padding-left: 0;
+                        }
+                    }
+                }
+
+                &-close {
+                    margin-top: 3.65vw;
+                }
+            }
+
+            &__buttons {
+                justify-content: space-around;
+            }
+
+        }
+
+        .cart-info {
+            margin-top: 8.33vw;
+            width: 100%;
+
+            &>form {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            &__adress {
+                width: 48%;
+
+                &-header {
+                    margin-bottom: 2.73vw;
+                    font-size: 2.08vw;
+                }
+
+                .cart-info__input {
+                    margin-bottom: 2.73vw;
+                    padding-inline: 2.21vw;
+                }
+            }
+
+            &__checkout {
+                margin-top: 5.1vw;
+                padding: 5.47vw;
+                height: 27.86vw;
+                width: 48%;
+
+                &-sub {
+                    font-size: 1.43vw;
+                }
+
+                &-header {
+                    font-size: 2.08vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:376px) {
+    .cart-page {
+        margin-block: 10.67vw 25.6vw;
+
+        .cart-content {
+            &__item {
+                height: 50.13vw;
+
+                &:first-of-type {
+                    margin-bottom: 8.53vw;
+                }
+
+                &-img {
+                    width: 45%;
+                }
+
+                &-info {
+                    margin-top: 3.6vw;
+
+                    &__header {
+                        margin-bottom: 6.93vw;
+                        font-size: 4.27vw;
+                    }
+
+                    &__details {
+                        font-size: 3.73vw;
+
+                        &>input {
+                            font-size: 2.67vw;
+                        }
+                    }
+                }
+
+                &-close {
+                    margin-top: 3vw;
+                }
+            }
+
+            &__buttons {
+                justify-content: space-between;
+            }
+        }
+
+        .cart-info {
+            margin-top: 12.8vw;
+
+            &__adress {
+                width: 100%;
+
+                &-header {
+                    margin-bottom: 5.6vw;
+                    font-size: 4.27vw;
+                }
+
+                .cart-info__input {
+                    margin-bottom: 5.6vw;
+                    padding-inline: 4.53vw;
+                }
+            }
+
+            &__checkout {
+                margin-top: 12.8vw;
+                padding: 10.67vw;
+                height: 57.07vw;
+                width: 100%;
+
+                &-sub {
+                    font-size: 2.93vw;
+                }
+
+                &-header {
+                    font-size: 4.27vw;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "id_product": 13,
+        "product_name": "MOSCHINO CHEAP AND CHIC",
+        "price": 561,
+        "collection": "woman collection",
+        "description": "Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.",
+        "img": [
+            "image/product-carousel1.png",
+            "image/product-carousel2.png",
+            "image/product-carousel3.png"
+        ]
+    }
+]

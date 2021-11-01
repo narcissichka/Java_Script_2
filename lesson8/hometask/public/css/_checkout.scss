@@ -1,0 +1,183 @@
+.checkout{
+    margin-block: 4.28vw 6.42vw;
+    display: flex;
+    flex-wrap: wrap;
+    .registration, .loyalty{
+        margin-inline: auto;
+    }
+    .registration{
+        width: 31.58%;
+        &-heading{
+            margin-bottom: 1.4vw;
+            text-transform: capitalize;
+            @include font(300, 1.07vw, 118.75%, normal);
+            color: $dark-color;
+            &:last-of-type{
+                margin-top: 2.34vw;
+            }
+        }
+        //Element
+        &__input{
+            display: block;
+            margin-bottom: 1.4vw;
+            padding-inline: 4.72%;
+            &:last-of-type{
+                margin-bottom: 1.07vw;
+            }
+        }
+        &-radio{
+            &+label{
+                text-transform: capitalize;
+                margin-right: 5.56%;
+                @include font(300, 0.74vw, 118.18%, normal);
+            }
+        }
+        &-passwordParametersText{
+            @include font(300, 0.87vw, 123.08%, normal);
+            color: lighten($secondary-grey__color, 26%);
+        }
+        //Element
+        &__button{
+            margin-top: 2.67vw;
+            .registration-button__img{
+                width: 1.09vw;
+                margin-left: 1.34vw;
+                transition: filter 0.2s linear;
+            }
+            &:hover .registration-button__img{
+                filter: invert(60%) sepia(51%) saturate(3302%) hue-rotate(313deg) brightness(91%) contrast(107%);
+            }
+        }
+    }
+    .loyalty{
+        margin-left: 11.23%;
+        width: 57.02%;
+        &-heading, &-text, &-list{
+            margin-bottom: 1.4vw;
+            @include font(300, 1.6vw, 120.83%, normal);
+        }
+        &-heading{
+            text-transform: uppercase;
+        }
+        &-item{
+            margin-left: 0;
+            margin-bottom: 1.07vw;
+            padding-left: 7%;
+            list-style: none;
+            background-image: url("../image/list-img.svg");
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 1.34vw;
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .checkout{
+        margin-block: 5.21vw 12.5vw;
+        justify-content: space-between;
+        .registration{
+            width: 49%;
+            margin: 0;
+            &-heading{
+                margin-bottom: 2.73vw;
+                font-size: 2.08vw;
+                &:last-of-type{
+                    margin-top: 4.56vw;
+                }
+            }
+            &__input{
+                margin-bottom: 2.73vw;
+                &:last-of-type{
+                    margin-bottom: 2.08vw;
+                }
+            }
+            &-radio{
+                &+label{
+                    font-size: 1.43vw;
+                }
+            }
+            &-passwordParametersText{
+                font-size: 1.69vw;
+            }
+            &__button{
+                margin-top: 5.21vw;
+                .registration-button__img{
+                    width: 2.12vw;
+                    margin-left: 2.6vw;
+                }
+            }
+        }
+        .loyalty{
+            width: 49%;
+            margin: 0;
+            &-heading, &-text, &-list{
+                margin-bottom: 2.73vw;
+                font-size: 2.08vw;
+            }
+            &-item{
+                padding-left: 10%;
+                margin-bottom: 2.08vw;
+                background-size: 2.6vw;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:376px){
+    .checkout{
+        margin-block: 10.67vw 25.6vw;
+        .registration{
+            width: 100%;
+            margin-bottom: 10.67vw;
+            &-heading{
+                margin-bottom: 5.6vw;
+                font-size: 4.27vw;
+                &:last-of-type{
+                    margin-top: 9.33vw;
+                }
+            }
+            &__input{
+                margin-bottom: 5.6vw;
+                &:last-of-type{
+                    margin-bottom: 4.27vw;
+                }
+            }
+            &-radio{
+                &+label{
+                    font-size: 2.93vw;
+                }
+            }
+            &-passwordParametersText{
+                font-size: 3.47vw;
+            }
+            &__button{
+                margin-top: 10.67vw;
+                .registration-button__img{
+                    width: 4.34vw;
+                    margin-left: 5.33vw;
+                }
+            }
+        }
+        .loyalty{
+            width: 100%;
+            &-heading, &-text, &-list{
+                margin-bottom: 5.6vw;
+                font-size: 4.27vw;
+            }
+            &-item{
+                margin-bottom: 4.27vw;
+                background-size: 5.33vw;
+                padding-left: 11%;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }   
+    
+}
