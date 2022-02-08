@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrong{
+    border: 1px solid red;
+}
+.error-text{
+    color:red;
+    margin-left: 2%;
+}
+#form{
+    display: flex;
+    margin-inline:2%;
+    margin-block: 1%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.088vw;
+}
+#form>input{
+    width:33%;
+}
+#form>button{
+    width: 25%;
+}
