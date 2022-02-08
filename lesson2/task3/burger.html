@@ -1,0 +1,105 @@
+<script>
+    class Burger {
+        constructor(size, ...adds) {
+            this.size = size;
+            if (this.size == 'big') {
+                this.price = 100;
+                this.calories = 40;
+            } else if (this.size == 'small') {
+                this.price = 50;
+                this.calories = 20;
+            } else {
+                console.log('Error. Invalid size input');
+                this.price = 0;
+                this.calories = 0;
+            }
+
+            this.cheese = 0 || adds[0];
+            this.salad = 0 || adds[1];
+            this.potato = 0 || adds[2];
+            this.spices = 0 || adds[3];
+            this.mayo = 0 || adds[4];
+            this.totalPrice = this.price;
+            this.totalCalories = this.calories;
+            console.log(`Price of the order: ${this.#calculateSum()} RUB`);
+            console.log(`Total calories: ${this.#calculateCalories()} KCAL`);
+        }
+        #calculateSum() {
+            if (this.spices) {
+                this.totalPrice += new Spices().price;
+            }
+            if (this.mayo) {
+                this.totalPrice += new Mayo().price;
+            }
+
+            if (this.cheese) {
+                this.totalPrice += new Cheese().price;
+            } else if (this.salad) {
+                this.totalPrice += new Salad().price;
+            } else if (this.potato) {
+                this.totalPrice += new Potato().price;
+            } else {
+                console.log('Error. Burger must have one addition');
+                this.totalPrice = 0;
+            }
+
+            return this.totalPrice;
+        }
+        #calculateCalories() {
+            if (this.spices) {
+                this.totalCalories += new Spices().calories;
+            }
+            if (this.mayo) {
+                this.totalCalories += new Mayo().calories;
+            }
+
+            if (this.cheese) {
+                this.totalCalories += new Cheese().calories;
+            } else if (this.salad) {
+                this.totalCalories += new Salad().calories;
+            } else if (this.potato) {
+                this.totalCalories += new Potato().calories;
+            } else {
+                this.calories = 0;
+            }
+            return this.totalCalories;
+        }
+    }
+    class Cheese {
+        constructor() {
+            this.price = 10;
+            this.calories = 20;
+        }
+    }
+    class Salad {
+        constructor() {
+            this.price = 20;
+            this.calories = 5;
+        }
+    }
+    class Potato {
+        constructor() {
+            this.price = 15;
+            this.calories = 10;
+        }
+    }
+    class Spices {
+        constructor() {
+            this.price = 15;
+            this.calories = 0;
+        }
+    }
+    class Mayo {
+        constructor() {
+            this.price = 20;
+            this.calories = 5;
+        }
+    }
+    //Burger must have one filling and may have spices and/or mayonnaise
+    console.log('Order 1. Big burger with cheese added:');
+    let burger1 = new Burger('big', 1);
+    console.log('Order 2. Small burger with salad added:');
+    let burger2 = new Burger('small', 0, 1);
+    console.log('Order 3. Big burger with potato, spices and mayonnaise:');
+    let burger3 = new Burger('big', 0, 0, 1, 1, 1);
+</script>
