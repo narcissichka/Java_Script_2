@@ -269,6 +269,17 @@ details summary::-webkit-details-marker {
 
 .header-content__right > a img {
   width: 2.197vw;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
+}
+
+.header-content__right > a img:hover {
+  -webkit-filter: brightness(0) saturate(100%);
+          filter: brightness(0) saturate(100%);
+  -webkit-filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
+          filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
 }
 
 .header-content__search {
@@ -289,8 +300,10 @@ details summary::-webkit-details-marker {
 }
 
 .header-content__search .search:hover {
-  -webkit-filter: brightness(200%);
-          filter: brightness(200%);
+  -webkit-filter: brightness(0) saturate(100%);
+          filter: brightness(0) saturate(100%);
+  -webkit-filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
+          filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
 }
 
 .header-content__search .search-form {
@@ -337,16 +350,31 @@ details summary::-webkit-details-marker {
   display: flex;
 }
 
+.header .carticon {
+  width: 2.197vw;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
+}
+
+.header .carticon:hover {
+  -webkit-filter: brightness(0) saturate(100%);
+          filter: brightness(0) saturate(100%);
+  -webkit-filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
+          filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
+}
+
 .header .cart-amount {
   position: absolute;
-  right: -5px;
-  top: -5px;
+  width: 1.1vw;
+  height: 1.1vw;
+  right: -15%;
+  top: -15%;
   z-index: 4;
-  width: 0.94vw;
-  height: 0.94vw;
-  border-radius: 0.47vw;
+  border-radius: 0.505vw;
   font-weight: normal;
-  font-size: 0.67vw;
+  font-size: 0.8vw;
   line-height: 140%;
   font-style: normal;
   text-align: center;
@@ -359,13 +387,13 @@ details summary::-webkit-details-marker {
           box-shadow: 0.33vw 0.67vw 1.34vw rgba(10, 21, 34, 0.2);
   border-radius: 0.33vw;
   z-index: 3;
-  right: -10px;
+  right: -50%;
   top: 130%;
   position: absolute;
   background-color: white;
-  padding: 10px;
+  width: 1100%;
+  padding: 40%;
   color: black;
-  width: 320px;
 }
 
 .header .cart-block:before {
@@ -373,8 +401,8 @@ details summary::-webkit-details-marker {
   width: 0;
   height: 0;
   position: absolute;
-  top: -10px;
-  right: 15px;
+  top: -0.8%;
+  right: 5.8%;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 10px solid white;
@@ -384,7 +412,8 @@ details summary::-webkit-details-marker {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 5px;
+  padding: 1%;
+  height: 10vw;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -392,14 +421,14 @@ details summary::-webkit-details-marker {
 }
 
 .header .cart-item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 2%;
 }
 
 .header .cart-item img {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin-right: 15px;
-  width: 40%;
+  margin-right: 3%;
+  height: 100%;
 }
 
 .btn-cart {
@@ -413,6 +442,14 @@ details summary::-webkit-details-marker {
   border: 0;
 }
 
+.product-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.9vw;
+  line-height: 130.75%;
+  font-style: normal;
+}
+
 .product-bio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -421,15 +458,22 @@ details summary::-webkit-details-marker {
 
 .product-single-price {
   color: #474747;
-  font-size: 0.5em;
+  font-weight: 300;
+  font-size: 0.5vw;
+  line-height: 120.75%;
+  font-style: normal;
 }
 
 .product-price {
-  margin-left: 30px;
+  margin-left: 2vw;
+  font-weight: 600;
+  font-size: 1vw;
+  line-height: 130.75%;
+  font-style: normal;
 }
 
 .product-desc {
-  max-width: 150px;
+  max-width: 65%;
 }
 
 .right-block {
@@ -450,8 +494,11 @@ details summary::-webkit-details-marker {
 }
 
 .product-quantity {
-  margin-top: 15px;
-  font-size: 0.75em;
+  margin-top: 50%;
+  font-weight: 300;
+  font-size: 0.75vw;
+  line-height: 120.75%;
+  font-style: normal;
 }
 
 .menu-navigation {
@@ -466,6 +513,17 @@ details summary::-webkit-details-marker {
 .menu-navigation .menu {
   padding-top: 20%;
   width: 2.197vw;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
+}
+
+.menu-navigation .menu:hover {
+  -webkit-filter: brightness(0) saturate(100%);
+          filter: brightness(0) saturate(100%);
+  -webkit-filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
+          filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%);
 }
 
 .menu-navigation .nav {
@@ -554,6 +612,10 @@ details summary::-webkit-details-marker {
 
 .del-btn {
   width: 30%;
+  font-weight: normal;
+  font-size: 1vw;
+  line-height: 130.75%;
+  font-style: normal;
 }
 
 .items-grid {
@@ -1224,14 +1286,44 @@ details summary::-webkit-details-marker {
   .header-content__search .search-form .search-button .search-icon {
     width: 4.3vw;
   }
-  .header .cart:hover::after {
-    width: 1.82vw;
-    height: 1.82vw;
-    border-radius: 0.91vw;
+  .header .carticon {
+    width: 4.3vw;
+  }
+  .header .cart-amount {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 1vw;
     font-weight: normal;
-    font-size: 1.3vw;
-    line-height: 140%;
+    font-size: 1.69vw;
+    line-height: 123.08%;
     font-style: normal;
+  }
+  .header .cart-block {
+    width: 792%;
+  }
+  .header .cart-block::before {
+    top: -1.6%;
+    right: 7.8%;
+  }
+  .header .cart-item {
+    height: 11.4vw;
+  }
+  .del-btn {
+    font-size: 1.82vw;
+  }
+  .product-price {
+    margin-left: 5vw;
+    font-size: 1.82vw;
+  }
+  .product-title {
+    font-size: 1.6vw;
+  }
+  .product-single-price {
+    font-size: 0.91vw;
+  }
+  .product-quantity {
+    font-size: 1.2vw;
+    margin-top: 20%;
   }
   .menu-navigation .menu {
     width: 4.3vw;
@@ -1351,10 +1443,10 @@ details summary::-webkit-details-marker {
     width: 11.73vw;
   }
   .header-content__right {
-    width: 9.33%;
+    width: 10%;
   }
   .header-content__right > a:first-of-type,
-  .header-content__right > a:last-of-type {
+  .header-content__right .cart {
     display: none;
   }
   .header-content__search .search {

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Man</title>
+    <link rel="icon" href="image/logo.svg" type="image/svg">
+    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script defer src="js/ProductComponent.js"></script>
+    <script defer src="js/CartComponent.js"></script>
+    <script defer src="js/FilterComp.js"></script>
+    <script defer src="js/ErrorComp.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="wrapper" id="app">
+        <div class="top">
+            <header class="header">
+                <div class="container">
+                    <div class="header-content">
+                        <div class="header-content__left">
+                            <a href="index.html"><img class="logo icon" src="image/logo.svg" alt="logo"></a>
+                            <div class="header-content__search">
+                                <img class="search icon" src="image/search.svg" alt="search">
+                                <filter-el v-show="showSearch"></filter-el>
+                            </div>
+                        </div>
+                        <div class="header-content__right">
+                            <nav class="menu-navigation">
+                                <a @click="showMenu = !showMenu"><img class="menu icon" src="image/menu.svg"
+                                        alt="menu"></a>
+                                <div class="nav" v-show="showMenu">
+                                    <a @click="showMenu = !showMenu" class="close"><img class="close-icon"
+                                            src="image/close.svg" alt="close"></a>
+                                    <h4 class="nav-header">menu</h4>
+                                    <ul class="nav-list">
+                                        <li> <a href="catalog.html">man</a>
+                                            <ul class="nav-list_">
+                                                <li><a href="catalog.html">accessories</a></li>
+                                                <li><a href="catalog.html">bags</a></li>
+                                                <li><a href="catalog.html">denim</a></li>
+                                                <li><a href="catalog.html">t-shirts</a></li>
+                                            </ul>
+                                        </li>
+                                        <li> <a href="catalog.html">woman</a>
+                                            <ul class="nav-list_">
+                                                <li><a href="catalog.html">accessories</a></li>
+                                                <li><a href="catalog.html">jackets &amp; coats</a></li>
+                                                <li><a href="catalog.html">polos</a></li>
+                                                <li><a href="catalog.html">t-shirts</a></li>
+                                                <li><a href="catalog.html">shirts</a></li>
+                                            </ul>
+                                        </li>
+                                        <li> <a href="catalog.html">kids</a>
+                                            <ul class="nav-list_">
+                                                <li><a href="catalog.html">accessories</a></li>
+                                                <li><a href="catalog.html">Jackets &amp; Coats</a></li>
+                                                <li><a href="catalog.html">polos</a></li>
+                                                <li><a href="catalog.html">t-shirts</a></li>
+                                                <li><a href="catalog.html">shirts</a></li>
+                                                <li><a href="catalog.html">bags</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <a href="checkout.html"><img class="account icon" src="image/account.svg" alt="account"></a>
+                            <cart ref="cart"></cart>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <header class="catalog-head">
+                <div class="container catalog-header">
+                    <h2 class="catalog-header__heading">men</h2>
+                    <div class="breadcrumbs">
+                        <a href="index.html" class="breadcrumbs-link">home</a> / <a href="#"
+                            class="breadcrumbs-link">men</a>
+                    </div>
+                </div>
+            </header>
+            <nav class="filters filters-catalog container">
+                <details class="filter">
+                    <summary class="filter-summary">filter <img class="filter-icon" src="image/filter.svg" alt="filter">
+                    </summary>
+                    <ul class="filter-options">
+                        <li class="filter-option"><span>category</span>
+                            <ul class="filter-items">
+                                <li class="filter-item"> <a href="#">accessories</a></li>
+                                <li class="filter-item"> <a href="#">bags</a></li>
+                                <li class="filter-item"> <a href="#">denim</a></li>
+                                <li class="filter-item"> <a href="#">hoodies & sweatshirts</a></li>
+                                <li class="filter-item"> <a href="#">jackets & coats</a></li>
+                                <li class="filter-item"> <a href="#">polos</a></li>
+                                <li class="filter-item"> <a href="#">shirts</a></li>
+                                <li class="filter-item"> <a href="#">shoes</a></li>
+                                <li class="filter-item"> <a href="#">sweaters &amp; knits</a></li>
+                                <li class="filter-item"> <a href="#">t-shirts</a></li>
+                                <li class="filter-item"> <a href="#">tanks</a></li>
+                            </ul>
+                        </li>
+                        <li class="filter-option"><span>brand</span>
+                            <ul class="filter-items">
+                                <li class="filter-item"> <a href="#">ostin</a></li>
+                                <li class="filter-item"> <a href="#">zara</a></li>
+                                <li class="filter-item"> <a href="#">pull &amp; bear</a></li>
+                                <li class="filter-item"> <a href="#">dior</a></li>
+                                <li class="filter-item"> <a href="#">louis vuitton</a></li>
+                                <li class="filter-item"> <a href="#">gucci</a></li>
+                            </ul>
+                        </li>
+                        <li class="filter-option"><span>designer</span>
+                            <ul class="filter-items">
+                                <li class="filter-item"> <a href="#">lorem</a></li>
+                                <li class="filter-item"> <a href="#">ipsum</a></li>
+                                <li class="filter-item"> <a href="#">dolor</a></li>
+                                <li class="filter-item"> <a href="#">sit</a></li>
+                                <li class="filter-item"> <a href="#">amet</a></li>
+                                <li class="filter-item"> <a href="#">consectetur</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </details>
+                <details class="trending">
+                    <summary class="filters-summary">trending now</summary>
+                    <ul class="filters-variants">
+                        <li class="trending-variant"><input class="custom-checkbox" type="checkbox" name="outerwear"
+                                id="custom-checkbox1"><label for="custom-checkbox1">outerwear</label></li>
+                        <li class="trending-variant"><input class="custom-checkbox" type="checkbox" name="shoes"
+                                id="custom-checkbox2"><label for="custom-checkbox2">shoes</label></li>
+                        <li class="trending-variant"><input class="custom-checkbox" type="checkbox" name="pants"
+                                id="custom-checkbox3"><label for="custom-checkbox3">pants &amp; shorts</label></li>
+                        <li class="trending-variant"><input class="custom-checkbox" type="checkbox" name="shirts"
+                                id="custom-checkbox4"><label for="custom-checkbox4">shirts &amp; t-shirts</label>
+                        </li>
+                        <li class="trending-variant"><input class="custom-checkbox" type="checkbox" name="bags"
+                                id="custom-checkbox5"><label for="custom-checkbox5">bags</label></li>
+                    </ul>
+                </details>
+                <details class="size">
+                    <summary class="filters-summary">size</summary>
+                    <ul class="filters-variants">
+                        <li class="size-variant"><input class="custom-checkbox" type="checkbox" name="xs"
+                                id="custom-checkbox6"><label for="custom-checkbox6">xs</label>
+                        </li>
+                        <li class="size-variant"><input class="custom-checkbox" type="checkbox" name="s"
+                                id="custom-checkbox7"><label for="custom-checkbox7">s</label></li>
+                        <li class="size-variant"><input class="custom-checkbox" type="checkbox" name="m"
+                                id="custom-checkbox8"><label for="custom-checkbox8">m</label></li>
+                        <li class="size-variant"><input class="custom-checkbox" type="checkbox" name="l"
+                                id="custom-checkbox9"><label for="custom-checkbox9">l</label></li>
+                        <li class="size-variant"><input class="custom-checkbox" type="checkbox" name="xl"
+                                id="custom-checkbox10"><label for="custom-checkbox10">xl</label>
+                        </li>
+                    </ul>
+                </details>
+                <details class="price">
+                    <summary class="filters-summary">price</summary>
+                    <ul class="filters-variants">
+                        <li class="price-variant"><input class="custom-checkbox" type="checkbox" name="upto100"
+                                id="custom-checkbox11"><label for="custom-checkbox11">10$ - 100$</label></li>
+                        <li class="price-variant"><input class="custom-checkbox" type="checkbox" name="upto300"
+                                id="custom-checkbox12"><label for="custom-checkbox12">100$ - 300$</label></li>
+                        <li class="price-variant"><input class="custom-checkbox" type="checkbox" name="upto500"
+                                id="custom-checkbox13"><label for="custom-checkbox13">300$ - 500$</label></li>
+                        <li class="price-variant"><input class="custom-checkbox" type="checkbox" name="more500"
+                                id="custom-checkbox14"><label for="custom-checkbox14">500$ &lt; </label>
+                        </li>
+                    </ul>
+                </details>
+            </nav>
+            <error ref="error"></error>
+            <products class="items-grid_catalog container" ref="products"></products>
+            <main>
+                <nav class="nav-links container">
+                    <a href="#" class="arrow arrow-previous"> <span></span> </a>
+                    <a href="#" class="arrow arrow-next"> <span></span> </a>
+                    <a href="#" class="catalog-page_1">1</a>
+                    <a href="#" class="catalog-page_2">2</a>
+                    <a href="#" class="catalog-page_3">3</a>
+                    <a href="#" class="catalog-page_4">4</a>
+                    <a href="#" class="catalog-page_5">5</a>
+                    <a href="#" class="catalog-page_6">6.....20</a>
+                </nav>
+            </main>
+            <div class="information">
+                <div class="information-container container">
+                    <div class="information-cell">
+                        <img src="image/delivery-icon.svg" alt="delivery" class="information-logo">
+                        <h3 class="information-header">Free Delivery</h3>
+                        <p class="information-text">Worldwide delivery on all. Authorit tively morph next-generation
+                            innov tion with extensive models.</p>
+                    </div>
+                    <div class="information-cell">
+                        <img src="image/sales-icon.svg" alt="sales" class="information-logo">
+                        <h3 class="information-header">Sales & discounts</h3>
+                        <p class="information-text">Worldwide delivery on all. Authorit tively morph next-generation
+                            innov tion with extensive models.</p>
+                    </div>
+                    <div class="information-cell">
+                        <img src="image/quality-icon.svg" alt="quality" class="information-logo">
+                        <h3 class="information-header">Quality assurance</h3>
+                        <p class="information-text">Worldwide delivery on all. Authorit tively morph next-generation
+                            innov tion with extensive models.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-upper">
+                <div class="footer-cover"></div>
+                <div class="footer-upper__container container">
+                    <figure class="review">
+                        <img src="image/review-icon.png" alt="review" class="review-icon">
+                        <figcaption class="review-text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
+                            pulvinar purus
+                            condimentum“</figcaption>
+                    </figure>
+                    <div class="subscribtion">
+                        <h3 class="subscription-header">subscribe</h3>
+                        <p class="subscription-text">for our newletter and promotion</p>
+                        <form action="#" class="subscription-form">
+                            <input type="email" class="subscription-form__input" required
+                                placeholder="Enter Your Email">
+                            <button type="submit" class="button button_subscribe">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-lower">
+                <div class="footer-lower__container container">
+                    <p class="footer-lower__text">
+                        &copy; 2021 Brand All Rights Reserved.
+                    </p>
+                    <div class="socialmedia">
+                        <a href="#" class="socialmedia-link button socialmedia__button button_socialmedia"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="socialmedia-link button socialmedia__button button_socialmedia"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="socialmedia-link button socialmedia__button button_socialmedia"><i
+                                class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="socialmedia-link button socialmedia__button button_socialmedia"><i
+                                class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

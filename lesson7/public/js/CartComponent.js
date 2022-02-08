@@ -47,7 +47,8 @@ Vue.component('cart', {
             }
         },
         remove(item) {
-            this.$parent.deleteJson(`/api/cart`)
+            let find = this.cartItems.find(el => el.id_product === item.id_product);
+            this.$parent.deleteJson(`/api/cart/${find.id_product}`)
                 .then(data => {
                     if (data.result === 1) {
                         if (item.quantity > 1) {

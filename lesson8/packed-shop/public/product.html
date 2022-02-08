@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="icon" href="image/logo.svg" type="image/svg">
+    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script defer src="js/ProductComponent.js"></script>
+    <script defer src="js/CartComponent.js"></script>
+    <script defer src="js/FilterComp.js"></script>
+    <script defer src="js/ErrorComp.js"></script>
+    <script defer src="js/CarouselComponent.js"></script>
+    <script defer src="js/SingleProductComp.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="wrapper" id="app">
+        <div class="top">
+            <header class="header">
+                <div class="container">
+                    <div class="header-content">
+                        <div class="header-content__left">
+                            <a href="index.html"><img class="logo icon" src="image/logo.svg" alt="logo"></a>
+                            <div class="header-content__search">
+                                <img v-show="!showSearch" @click="showSearch = !showSearch" class="search icon"
+                                    src="image/search.svg" alt="search">
+
+                                <filter-el v-show="showSearch"></filter-el>
+
+                            </div>
+                        </div>
+                        <div class="header-content__right">
+                            <nav class="menu-navigation">
+                                <a @click="showMenu = !showMenu"><img class="menu icon" src="image/menu.svg"
+                                        alt="menu"></a>
+                                <div class="nav" v-show="showMenu">
+                                    <a @click="showMenu = !showMenu" class="close"><img class="close-icon"
+                                            src="image/close.svg" alt="close"></a>
+                                    <h4 class="nav-header">menu</h4>
+                                    <ul class="nav-list">
+                                        <li> <a href="catalog.html">man</a>
+                                            <ul class="nav-list_">
+                                                <li><a href="catalog.html">accessories</a></li>
+                                                <li><a href="catalog.html">bags</a></li>
+                                                <li><a href="catalog.html">denim</a></li>
+                                                <li><a href="catalog.html">t-shirts</a></li>
+                                            </ul>
+                                        </li>
+                                        <li> <a href="catalog.html">woman</a>
+                                            <ul class="nav-list_">
+                                                <li><a href="catalog.html">accessories</a></li>
+                                                <li><a href="catalog.html">jackets &amp; coats</a></li>
+                                                <li><a href="catalog.html">polos</a></li>
+                                                <li><a href="catalog.html">t-shirts</a></li>
+                                                <li><a href="catalog.html">shirts</a></li>
+                                            </ul>
+                                        </li>
+                                        <li> <a href="catalog.html">kids</a>
+                                            <ul class="nav-list_">
+                                                <li><a href="catalog.html">accessories</a></li>
+                                                <li><a href="catalog.html">Jackets &amp; Coats</a></li>
+                                                <li><a href="catalog.html">polos</a></li>
+                                                <li><a href="catalog.html">t-shirts</a></li>
+                                                <li><a href="catalog.html">shirts</a></li>
+                                                <li><a href="catalog.html">bags</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <a href="checkout.html"><img class="account icon" src="image/account.svg" alt="account"></a>
+                            <cart ref="cart"></cart>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <header class="catalog-head">
+                <div class="container catalog-header">
+                    <h2 class="catalog-header__heading">MOSCHINO CHEAP AND CHIC</h2>
+                    <div class="breadcrumbs">
+                        <a href="index.html" class="breadcrumbs-link">home</a> / <a href="catalog-men.html"
+                            class="breadcrumbs-link">men</a>
+                        / <a href="catalog.html" class="breadcrumbs-link">new arrivals</a> / <a href="#"
+                            class="breadcrumbs-link">MOSCHINO CHEAP AND CHIC</a>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="product">
+                    <carousel></carousel>
+                    <single-product ref="product"></single-product>
+                </div>
+                <products class="items-grid_product container" ref="products"></products>
+            </main>
+        </div>
+        <footer class="footer">
+            <div class="footer-upper">
+                <div class="footer-cover"></div>
+                <div class="footer-upper__container container">
+                    <figure class="review">
+                        <img src="image/review-icon.png" alt="review" class="review-icon">
+                        <figcaption class="review-text">&quot;Vestibulum quis porttitor dui! Quisque viverra
+                            nunc&nbsp;mi,
+                            a&nbsp;pulvinar purus condimentum&quot;</figcaption>
+                    </figure>
+                    <div class="subscribtion">
+                        <h3 class="subscription-header">subscribe</h3>
+                        <p class="subscription-text">for our newletter and promotion</p>
+                        <form action="#" class="subscription-form">
+                            <input type="email" class="subscription-form__input" required
+                                placeholder="Enter Your Email">
+                            <button type="submit" class="button button_subscribe">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-lower">
+                <div class="footer-lower__container container">
+                    <p class="footer-lower__text">
+                        &copy; 2021 Brand All Rights Reserved.
+                    </p>
+                    <div class="socialmedia">
+                        <a href="#" class="socialmedia-link button socialmedia__button button_socialmedia"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="socialmedia-link button socialmedia__button button_socialmedia"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="socialmedia-link button socialmedia__button button_socialmedia"><i
+                                class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="socialmedia-link button socialmedia__button button_socialmedia"><i
+                                class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
