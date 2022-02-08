@@ -1,0 +1,199 @@
+.introduction{
+    background-color: $introduction-bg__color;
+    &_{
+        display: flex;
+        align-items: center;
+        &>img{
+            width: 56.84%;
+        }
+    }
+    &-intro{
+        display: flex;
+        width: 35.13%;
+    }
+    &-text{
+        @include font(700, 2.1395vw, 118.75%, normal);
+        color: $dark-color;
+        text-transform: uppercase;
+        &__header{
+            @include font(900, 150%, 120.83%, normal);
+        }
+        &__fashion{
+            color: $highlight-pink__color;
+        }
+    }
+    .line{
+        width: 3%;
+        background-color: $highlight-pink__color;
+        margin-right: 4%;
+    }
+}
+
+// special offers
+.offers{
+    padding-top: 4.34vw;
+    text-align: center;
+    text-transform: uppercase;
+    @include font(400, 1.07vw, 118.75%, normal);
+    display: grid;
+    grid-template: 17.38vw 12.03vw / repeat(3, 1fr);
+    grid-column-gap:2.5%;
+    grid-row-gap: 6%;
+    &>a{
+        position: relative;
+        text-decoration: none;
+        color:$offers-text__color;
+        transition: transform 0.3s linear;
+        &>p{
+            position:relative;
+            top:40%;
+            z-index: 2;
+        }
+        &:hover{
+            transform: scale(1.1);
+            z-index: 1;
+        }
+    }
+    .cover{
+        position: absolute;
+        inset: 0;
+        background: $offers-cover__color;
+    }
+    &-women{
+        background: url("../image/offers-women.png") no-repeat center center;
+        background-size: cover;
+    }
+    &-men{
+        background: url("../image/offers-men.png") no-repeat center center;
+        background-size: cover;
+    }
+    &-kids{
+        background: url("../image/offers-kids.png") no-repeat center center;
+        background-size: cover;
+    }
+    &-accesories{
+        grid-column: 1/4;
+        background: url("../image/offers-accesories.png") no-repeat center center;
+        background-size: cover;
+    }
+   
+    &-headtext{
+        @include font(700, 1.6vw, 120.83%, normal);
+        color: $highlight-pink__color;
+    }
+}
+
+.fetured{
+    display: flex;
+    flex-direction: column;
+    padding-top: 8vw;
+    &-description{
+        text-align: center;
+    }
+    &-header{
+        @include font(bold, 2.01vw, 120%, normal);
+        color: $dark-color;
+    }
+    &-text{
+        @include font(normal, 0.94vw, 121.43%, normal);
+        color: lighten($secondary-grey__color, 19%);
+    }
+}
+.items{
+    //Element
+    &__button{
+        align-self: center;
+	    display: inline-block;
+    }
+}
+
+@media screen and (max-width:768px){
+    .fetured{
+        padding-top: 20.18vw;
+        &-header{
+            font-size: 3.91vw;
+        }
+        &-text{
+            font-size: 1.82vw;
+        }
+    }
+    .introduction{
+        &_{
+            justify-content: space-around;
+            &>img{
+                height: 47.92vw;
+                width: auto;
+            }
+        }
+        &-intro{
+            width: 42.37%;
+        }
+        .line{
+            width: 3.86%;
+        }
+        &-text{
+            font-size: 3.13vw;
+            &__header{
+                font-size: 5.73vw;
+            }
+        }
+
+    }
+    .offers{
+        padding-top: 2.6vw;
+        font-size: 2.08vw;
+        grid-template-rows: 21.83vw 15.11vw;
+        &-headtext{
+            font-size: 3.13vw;
+        }
+        &>a:last-of-type{
+            &>p{
+                top: 35%;
+            }
+        }
+    }
+}
+@media screen and (max-width:376px){
+    .fetured{
+        padding-top: 45.18vw;
+        &-header{
+            font-size: 8vw;
+        }
+        &-text{
+            font-size: 3.73vw;
+        }
+    }
+    .introduction{
+        &_{
+            width: 100%;
+            height: 96.8vw;
+            &>img{
+                display: none;
+            }
+        }
+        &-intro{
+            width: 76.68%;
+        }
+        .line{
+            width: 3.5%;
+        }
+        &-text{
+            font-size:  5.33vw;
+            &__header{
+                font-size: 10.13vw;
+            }
+        }
+    }
+    .offers{
+        padding-top: 17.07vw;
+        font-size: 4.27vw;
+        grid-template: repeat(3, 65.87vw) 29.6vw / 100%;
+        grid-row-gap: 3.5%;
+        &-headtext{
+            font-size: 6.4vw;
+        }
+        &>a:last-of-type{
+            grid-column: span 1;
+        }
+    }
+}

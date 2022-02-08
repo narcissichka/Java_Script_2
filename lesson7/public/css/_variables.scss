@@ -1,0 +1,42 @@
+$site-width: 1140px;//1140px
+$block-width: 360px;//31.58% from $site-width and 24.06vw
+$carousel-height: 51.94vw;
+$cart-content__width: 57.19%;
+$screen-width: 100vw;
+
+$highlight-pink__color: #F16D7F;
+$secondary-grey__color: #6F6E6E;
+$dark-color: #222222;//may be replaced by: darken($secondary-grey__color,30%)
+$catalog-head__and__checkbox-bg__color:#F8F3F4;
+$introduction-bg__color: #F1E4E6;
+$checkbox-checked-bd__color: #F1E4E6;
+$navigation-bg__color: #FFFFFF;
+$button-text__color: #FFFFFF;
+$offers-text__color: #FFFFFF;
+$arrows-bd__color: #000000;
+$shadow-color: rgba(10, 21, 34, 0.2);
+$footer-cover__color: rgba(244, 244, 244, 0.7);
+$offers-cover__color: rgba(33, 22, 22, 0.7);
+$checkbox-focus-sh__color: rgba(247, 121, 142, 0.25);
+$carousel-controls-bg__color:rgba(42, 42, 42, 0.15);
+$button-bd__color: #FF6A6A;//replaced with simular lighten(saturate($highlight-pink__color, 17%), 1%)
+$button-hover__color: #F26376;//replaced with simular darken(saturate($highlight-pink__color, 1%), 1%)
+$catalog-page-nav-hover__color: #EF5B70;// replaced with desaturate(darken($highlight-pink__color, 4%), 1%)
+$product-page-highlight__color: #EF5B70;// replaced with darken($highlight-pink__color, 4%)
+$cart-quote__color:#4A4A4A;// replaced with simular darken($secondary-grey__color, 14%)
+$product-info-header__color: #4D4D4D;//replaced with simular darken($secondary-grey__color, 13%)
+$cart-item-details__color: #575757;//replaced with simular darken($secondary-grey__color, 9%)
+$item-text__color: #5D5D5D;//replaced with simular lighten(darken($secondary-grey__color, 8%),1%)
+$product-info-text__color: #5E5E5E;//replaced with simular lighten(darken($secondary-grey__color, 8%),2%)
+$breadcrumbs-link__color: #636363;//replaced with simular saturate(darken($secondary-grey__color, 5%), 1%)
+$fetured-text__color: #9F9F9F;// replaced with simular lighten($secondary-grey__color, 19%)
+$cart-input-country__color: #B1B1B1;// replaced with simular lighten($secondary-grey__color, 26%)
+$cart-buttons-bd__color: #A4A4A4;// replaced with simular lighten($secondary-grey__color, 21%)
+$sub-form-input__color: #E1E1E1;// replaced with simular lighten($secondary-grey__color, 45%)
+$cart-hline__color: #E2E2E2;// replaced with simular lighten($secondary-grey__color, 45.5%)
+$checkbox-disabled-bg__color: #e9ecef;//replaced with simular lighten($secondary-grey__color, 48%)
+$catalog-page__and__checkbox-bd__color: #EBEBEB;// replaced with simular lighten($secondary-grey__color, 49%)
+$cart-checkout-bg__color: #F5F3F3;//replaced with simular lighten($secondary-grey__color, 52%)
+$product-carousel-bg__color: #F7F7F7;//replaced with simular lighten($secondary-grey__color, 53.5%)
+$item-bg__color: #F8F8F8;//replaced with simular lighten($secondary-grey__color, 54%)
+$light-text__color: #FBFBFB;//replaced with simular lighten($secondary-grey__color, 55%)
